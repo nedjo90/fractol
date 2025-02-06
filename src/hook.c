@@ -6,9 +6,14 @@
 /*   By: nhan <nhan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 13:05:13 by nhan              #+#    #+#             */
-/*   Updated: 2025/02/05 19:23:34 by nhan             ###   ########.fr       */
+/*   Updated: 2025/02/06 01:39:27 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
+void	ft_set_hooks(t_param *p)
+{
+	mlx_scroll_hook(p->mlx, ft_scroll_hook, p);
+	mlx_key_hook(p->mlx, ft_key_hook, p);
+}
